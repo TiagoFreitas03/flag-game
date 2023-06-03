@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react"
 
 import { useStopwatch } from "../hooks/Stopwatch"
-import { countries } from '../assets/countries'
 import { shuffleArray } from "../utils/shuffle-array"
+import { Country } from "../interfaces/Country"
 
 interface GameProps {
 	started: boolean
+	countries: Country[]
 	onComplete: (correct: number, incorrect: number, time: string) => void
 }
 
-export function Game({ started, onComplete }: GameProps) {
+export function Game({ started, countries, onComplete }: GameProps) {
 	const { start: startTime, stop: stopTime, time } = useStopwatch()
 
 	const [current, setCurrent] = useState(0)

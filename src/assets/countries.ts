@@ -1,4 +1,6 @@
-export const countries = [
+import { Country } from "../interfaces/Country"
+
+export const countries: Country[] = [
 	{	code: "AF",	name: "Afeganistão", continents: ["Ásia"] },
 	{	code: "ZA",	name: "África do Sul", continents: ["África"] },
 	{	code: "AX",	name: "Aland, Ilhas",	continents: ["Europa"] },
